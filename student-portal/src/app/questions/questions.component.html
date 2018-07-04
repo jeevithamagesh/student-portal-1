@@ -1,0 +1,17 @@
+<h2 align="center">
+
+    {{message}} Questions</h2>
+
+<div class="badge" *ngFor="let q of ques;let i=index">{{i+1}}</div>
+<div class="w3-panel w3-card" *ngFor="let q of ques|slice:start:end;let i=index">
+    <p> {{q.question}}</p>
+
+
+    <p> <input type="radio" name="option">{{q.options[0]}}</p>
+    <p> <input type="radio" name="option">{{q.options[1]}}</p>
+    <p> <input type="radio" name="option">{{q.options[2]}}</p>
+    <p> <input type="radio" name="option">{{q.options[3]}}</p>
+    <button class="button button3">Save</button>
+
+</div>
+<button (click)="submit()">{{btnName}}</button>

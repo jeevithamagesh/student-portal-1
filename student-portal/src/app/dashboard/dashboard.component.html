@@ -1,0 +1,22 @@
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+</head>
+<div class="sscontent">
+    <img src="../../assets/dashboardimg.jpg" class="dashboardimg">
+
+
+    <div class="grid">
+        <h2 align="center">Select the Subject</h2>
+        <br>
+
+        <div class="grid-container">
+
+
+            <div class="grid-item" *ngFor="let sub of subs;let i=index" (click)="sendMessage(i+1)">{{sub}}</div>
+        </div>
+        <a href="#" class="btn btn-info btn-lg">
+            <span class="glyphicon glyphicon-log-out"></span> Log out
+        </a>
+    </div>
+</div>
